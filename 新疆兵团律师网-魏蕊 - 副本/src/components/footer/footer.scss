@@ -1,0 +1,54 @@
+// Core variables and mixins
+@import "variables";
+@import "mixins";
+
+
+.footer {
+  .footer-link {
+    background-color: $grounding;
+
+    .link-right {
+      padding-top: 42px;
+      padding-right: 54px;
+
+      .link-item {
+        width: 100px;
+        height: 65px;
+        background-image: url(/src/assets/images/footer/footer-logo.jpg);
+        background-repeat: no-repeat;
+      }
+
+      .link-pic-code {
+        height: 100px;
+        background-image: url(/src/assets/images/footer/footer-code.png);
+      }
+    }
+
+    .link-left {
+      width: 180px;
+      padding-top: 42px;
+      padding-bottom: 44px;
+
+      .link-title {
+        font-size: 16px;
+        color: $brand;
+      }
+
+      .link-text {
+        color: $dynamic;
+        line-height: 1.8;
+      }
+
+      .link-text a:hover {
+        color: $brand;
+      }
+    }
+  }
+
+  .footer-words {
+    padding-top: 38px;
+    padding-bottom: 36px;
+    color: $dynamic;
+    text-align: center;
+  }
+}

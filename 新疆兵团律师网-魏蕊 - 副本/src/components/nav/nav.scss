@@ -1,0 +1,159 @@
+// Core variables and mixins
+@import 'variables';
+@import 'mixins';
+
+.nav {
+  background-color: $brand;
+
+  .navbar {
+    border: none;
+
+    .tab-item {
+      width: calc(100%/5);
+
+      .nav-tab-title {
+        display: block;
+        font-size: 18px;
+        color: $white;
+        text-align: center;
+        line-height: 80px;
+      }
+    }
+
+    // 悬浮出来下拉菜单  
+    .tab-item:hover {
+      background-color: $white;
+
+      & .nav-tab-title {
+        color: $brand;
+        font-weight: 600;
+      }
+
+      & .subnav {
+        display: block;
+      }
+    }
+  }
+}
+
+.subnav {
+  //下拉内容 (默认隐藏)
+  position: absolute;
+  left: 0;
+  z-index: 100;
+  display: none;
+  background: $white;
+  box-shadow: 0 4px 4px $gray-lighter;
+
+  .dropdown-content {
+    padding: 32px 55px 45px 46px;
+
+    .drodown-list {
+
+      .drodown-edu {
+        width: calc(100%/7);
+      }
+
+      .label-options {
+        display: block;
+        font-size: 16px;
+        line-height: 35px;
+        color: $black;
+      }
+
+      .special-blue {
+        color: $brand;
+        text-decoration: underline;
+      }
+
+      .drodown-edu:hover .label-options {
+        text-decoration: underline;
+        color: $brand;
+      }
+    }
+  }
+
+  // 下面内容
+  .dropdown-summary {
+    padding-top: 48px;
+
+    // 下面内容 - 左
+    .summary-left {
+      width: 385px;
+
+    }
+
+    // 协会简介
+    .summary-tag {
+      width: 105px;
+      height: 20px;
+      font-size: 16px;
+      border-left: 6px solid $brand;
+      text-align: center;
+      color: $brand;
+    }
+
+    .intro-line {
+      position: relative;
+      top: 10px;
+      left: 110px;
+      width: 280px;
+      height: 1px;
+      background: $scrollbar-color;
+      content: "";
+    }
+
+    // 简介
+    .introduction-the {
+      padding-top: 30px;
+      padding-left: 22px;
+      font-size: 14px;
+      line-height: 23px;
+      text-align: justify;
+      text-indent: 2em;
+
+      .details {
+        color: $brand;
+      }
+    }
+
+    .summary-right {
+      height: 350px;
+      font-size: 16px;
+
+      .summary-tag-right {
+        width: 105px;
+        height: 20px;
+        border-left: 6px solid $brand;
+        text-align: center;
+        color: $brand;
+      }
+
+      .line {
+        position: relative;
+        top: 10px;
+        width: 300px;
+        height: 1px;
+        background: $scrollbar-color;
+        content: "";
+      }
+
+      .introduction-over {
+        width: 410px;
+        padding-top: 30px;
+        padding-left: 30px;
+        font-size: 14px;
+        text-align: justify;
+      }
+    }
+
+    .the-council {
+      padding-bottom: 18px;
+
+      .council-identity {
+        font-size: 16px;
+        font-weight: 600;
+      }
+    }
+  }
+}

@@ -1,0 +1,77 @@
+// Core variables and mixins
+@import "variables";
+@import "mixins";
+
+.sidebar {
+  position: fixed;
+  top: 245px;
+  left: 50%;
+  height: 524px;
+  transform: translate(540px);
+  background-color: $white;
+
+  .side-tab {
+    background: $grounding;
+    box-shadow: 0 0 10px $side-shadow;
+
+    .side-tab-piece {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 2px;
+      background: $white;
+      text-align: center;
+      cursor: pointer;
+
+      .piece-link {
+        display: inline-block;
+        padding-top: 15px;
+        font-size: 14px;
+        color: $black;
+
+        .side-icon {
+          font-size: 35px;
+          color: $brand;
+        }
+
+        .side-text {
+          font-size: 16px;
+        }
+      }
+    }
+
+    .radius-t {
+      border-radius: 5px 5px 0 0;
+    }
+    .radius-b {
+      border-radius: 0 0 5px 5px;
+    }
+    .side-tab-piece:hover {
+      background: $brand;
+
+      .side-icon {
+        color: $white;
+      }
+
+      .side-text {
+        color: $white;
+      }
+
+    }
+  }
+
+  .side-code {
+    position: relative;
+    top: 20px;
+    padding: 10px;
+    box-shadow: 0 0 10px $side-shadow;
+    border-radius: 5px;
+    cursor: pointer;
+
+    .code-img {
+      height: 78px;
+      background-image: url(/src/assets/images/sidebar/QRcode.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}

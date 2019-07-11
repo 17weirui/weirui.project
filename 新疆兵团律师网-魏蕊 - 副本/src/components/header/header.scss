@@ -1,0 +1,85 @@
+// Core variables and mixins
+@import 'variables';
+@import 'mixins';
+
+.header {
+  height: 134px;
+  background-image: url(/src/assets/images/header-nav/head.jpg);
+  background-position: center;
+
+  .header-content {
+    padding-top: 30px;
+  }
+
+  .logo {
+    width: 332px;
+    height: 74px;
+    background: url(/src/assets/images/header-nav/logo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+  }
+
+  // 搜索
+  .login-icon {
+    padding-top: 20px;
+
+    .apply-icon {
+      color: $brand;
+      font-size: 25px;
+      cursor: pointer;
+    }
+  }
+
+  .enter-list {
+    width: 210px;
+    font-size: 16px;
+    line-height: 74px;
+
+    .click-log {
+      border-right: 1px solid $brand;
+    }
+
+    .click-apply {
+      padding: 0 19px 0 19px;
+      color: $brand;
+
+      &:hover {
+        color: lighten($brand, 20%);
+      }
+    }
+  }
+
+  .search {
+    width: 330px;
+    padding-top: 12px;
+
+    .search-button {
+      width: 70px;
+      height: 48px;
+      text-align: center;
+      line-height: 48px;
+      background: url(/src/assets/images/header-nav/seek.png);
+      cursor: pointer;
+
+      .search-icon {
+        color: $white;
+        font-size: 25px;
+      }
+    }
+  }
+
+  .keyword-search {
+    width: 260px;
+    height: 48px;
+    padding: 0 30px;
+    border: 0 none;
+    border-radius: 5px 0 0 5px;
+    outline-style: none;
+
+    &::-webkit-input-placeholder {
+      color: $search;
+      font-size: 14px;
+    }
+  }
+}
